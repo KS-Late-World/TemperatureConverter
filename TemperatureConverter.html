@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 450px;
+            background-image: url(https://www.thompson-morgan.com/static-images/tandm/static-articles/edible-flowers/edible-flowers-guide.jpg);
+                       background-size: cover;
+        }
+        .input {
+            background-color: indigo;
+            color: ivory;
+            height: 300px;
+            font-size: 25px;
+            width: 300px;
+            padding: 30px;
+        }
+        .heading{
+            color:ivory ;
+            font-size: x-large;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h2>Temperature Converter</h2>
+    </div>
+    <div class="input">
+     <span>Fahrenheit:</span>   <input id="Finput" type="number" placeholder="Enter A Fahrenheit Value " onchange="F2C()">
+        <hr>
+     <span>Celcius:</span>   <span class="Celciusoutput"></span>
+     <hr>
+     <span>Celcius:</span>    <input id="Ceinput"
+     type="number" placeholder="Enter A Celcius Value" onchange="C2F()">
+     <hr>
+     <span>Fahrenheit:</span> <span id="Foutput"></span>
+     <hr>
+    </div>
+    
+
+    
+    <script>
+        function F2C() {
+            var F =document.querySelector('#Finput').value
+            var C= (F-32)*(5/9)
+            document.querySelector('.Celciusoutput').innerHTML=C
+        }
+        function C2F(){
+            var C=document.querySelector('#Ceinput').value
+            var F=(C*(9/5))+32
+            document.querySelector('#Foutput').innerHTML=F
+        }
+    </script>
+</body>
+https://ks-late-world.github.io/BMICalculator/BMIcalculator.html
+</html>
